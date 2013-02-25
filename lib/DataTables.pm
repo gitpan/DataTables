@@ -11,7 +11,7 @@ use CGI;
 use DBI;
 use JSON::XS;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 # Preloaded methods go here.
 
@@ -237,7 +237,7 @@ sub json {
 	my $pw = $self->{pass};
 
 	#DATA SOURCE NAME
-	my $dsn = "dbi:mysql:$database:localhost:3306";
+	my $dsn = "dbi:mysql:$database:$host:3306";
 
 	# get database handle
 	my $dbh = DBI->connect($dsn, $user, $pw) or croak "couldn't connect to database: $!";

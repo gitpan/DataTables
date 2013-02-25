@@ -22,4 +22,4 @@ requires:
   Carp: 0
   DBI: 1.611
   JSON::XS: 2.32
-version: 0.01
+version: 0.02
